@@ -1,0 +1,9 @@
+[{{cookiecutter.project_slug}}]
+python = "3.12"
+cuda_version = "auto"
+
+[{{cookiecutter.project_slug}}.packages]
+# Add pip packages here
+# Example: torch = ">=2.0.0"
+# Example: numpy = "*"
+requirements = []
