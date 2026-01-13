@@ -12,9 +12,53 @@
 1. Look up this extension in ComfyUI-Manager. If you are installing manually, clone this repository under `ComfyUI/custom_nodes`.
 1. Restart ComfyUI.
 
-# Features
+## Features
 
 - A list of features
+
+## Model Placement
+
+This node requires the following models. Download and place them manually:
+
+| Model | Download | Location |
+|-------|----------|----------|
+| model.safetensors | [HuggingFace](https://huggingface.co/) | `ComfyUI/models/{{cookiecutter.project_slug}}/` |
+
+## Nodes
+
+| Node | Description |
+|------|-------------|
+| ExampleNode | Example node description |
+
+## Troubleshooting
+
+### Nodes not appearing in ComfyUI
+
+If you see "running in pytest mode" in the ComfyUI logs, this is a false positive. Set this environment variable before starting ComfyUI:
+
+```bash
+# Linux/Mac
+export {{cookiecutter.project_slug | upper}}_FORCE_INIT=1
+
+# Windows
+set {{cookiecutter.project_slug | upper}}_FORCE_INIT=1
+```
+
+### CUDA/GPU Issues
+
+- Ensure your PyTorch version matches your CUDA version
+- Try running with CPU first to isolate GPU-specific issues
+- Check that all dependencies are installed: `pip install -r requirements.txt`
+
+## Community
+
+Join the [ComfyUI-3D Discord](https://discord.gg/UBHmUreeaC) for support and discussion.
+
+## Credits
+
+- Original implementation: [Link to original repo/paper]
+
+---
 
 ## Develop
 
